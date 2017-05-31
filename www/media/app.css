@@ -1,0 +1,186 @@
+@font-face {
+    font-family: Gilroy;
+    font-weight: 700;
+    src: url(Gilroy-ExtraBold.otf)
+}
+
+@font-face {
+    font-family: Gilroy;
+    font-weight: 400;
+    src: url(Gilroy-Light.otf)
+}
+
+body {
+    text-align: center;
+}
+
+body, h1, .h1, h2, .h2, h3, .h3, .section-title, .header, textarea {
+    font-family: Gilroy, tahoma, arial, verdana, sans-serif;
+}
+
+input[type="text"], input[type="number"], select, textarea, button {
+    padding: 8px 16px;
+    font-size: 16px;
+}
+
+#app form {
+    display: inline-block;
+}
+
+#app label {
+    display: block;
+    margin: 0 auto 5px auto;
+    text-align: left;
+}
+
+#app label span {
+    display: inline-block;
+    width: 80px;
+    text-align: left;
+    padding-right: 10px;
+}
+
+#app {
+    display: block;
+    min-height: 400px;
+    /*padding-top: 30px;*/
+    padding-bottom: 30px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+#app.loading > * {
+    display: none;
+}
+
+#app.loading {
+    background: url(/media/loading.gif) center top no-repeat;
+}
+
+#app.catalog .cart-offer + .cart-offer {
+    margin-top: 5px;
+}
+
+#app.catalog .offer > *,
+#app.order .cart-offer > * {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#app.catalog .offer > * + *,
+#app.order .cart-offer > * + * {
+    margin-left: 10px;
+}
+
+#app.catalog .offer-name,
+#app.order .cart-offer-name {
+    font-size: 30px;
+}
+
+#app .price:after {
+    content: '$';
+}
+
+#app .cart-total {
+    color: darkgreen;
+    font-weight: 700;
+}
+
+#app .cart-total.overdraft {
+    color: darkred;
+}
+
+#app .cart-offer-multi-sign:after {
+    content: ' x ';
+}
+
+#app .cart-offer-equal-sign:after {
+    content: ' = ';
+}
+
+#app.catalog {
+    width: 800px;
+}
+
+#app.catalog .offers,
+#app.catalog .cart-wrapper {
+    display: table-cell;
+    width: 50%;
+    vertical-align: top;
+}
+
+#app.catalog .offers .offer + .offer {
+    margin-top: 4px;
+}
+
+#app.catalog .cart-offer-image.small {
+    height: 50px;
+}
+
+#app.catalog .cart-total {
+    margin: 10px 0 5px;
+}
+
+#app.catalog .offer-professor {
+    font-weight: 700;
+}
+
+#app.catalog .offer-professor,
+#app.catalog .offer-datetime {
+    display: block;
+}
+#app.catalog .offer-professor:before {
+    content: '@ '
+}
+#app.catalog .offer-datetime:before {
+    content: 'T '
+}
+
+#app.catalog .offer-rating-star {
+    display: inline-block;
+    height: 13px;
+    width: 13px;
+    text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#app.catalog .offer-info {
+    width: 170px;
+}
+
+#app.catalog .offer-rating-star {
+    padding: 3px;
+}
+
+#app.catalog .offer-rating > .offer-rating-star:not(.empty) {
+    background-image: url(/media/img/star-rating-full.png);
+}
+
+#app.catalog .offer-rating > .offer-rating-star.empty {
+    background-image: url(/media/img/star-rating-empty.png);
+}
+
+#app.catalog .offer-rating:hover > .offer-rating-star,
+#app.catalog .offer-rating.can-rate:hover > .offer-rating-star {
+    background-image: url(/media/img/star-rating-full.png);
+}
+
+#app.catalog .offer-rating > .offer-rating-star.rated ~ .offer-rating-star,
+#app.catalog .offer-rating.can-rate > .offer-rating-star:hover ~ .offer-rating-star {
+    background-image: url(/media/img/star-rating-empty.png);
+}
+
+#app.catalog .offer-rating.can-rate > .offer-rating-star {
+    cursor: pointer;
+}
+
+#app.order .cart-delivery,
+#app.order .cart-total {
+    margin: 15px 0 5px;
+}
+
+#app.order .cart-delivery-empty {
+    margin: 0 0 0 10px;
+    color: darkred;
+}

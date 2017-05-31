@@ -1,0 +1,37 @@
+<?php
+/**
+ * Simple template
+ * We do have only this single template in our system...
+ * ...so for sake of simplicity - we do not have global
+ * ...template (wrapper with root html elements, dynamic scripts setters, header, footer etc...)
+ * @todo add global template...
+ */
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses Picker</title>
+    <link rel="stylesheet" href="media/app.css?_=<?php echo $this->scriptsCacheCounter ?>">
+</head>
+<body>
+<h1>Courses Picker</h1>
+
+<pre>
+    Total Spent: 7-8 hours (without frameworks...), need to sleep for a while, left todo...
+    1) @todo add async loading on bottom scroll
+    2) @todo add bar with allowed sorting fields...
+    3) @todo add single super query to fetch whole page data (need to compare which is better...)
+    4) One big TODO: Use Symfony/Laravel/Phalcon on backend and ReactJs on the client side - instead of wasting time writing my libraries what I actually done...
+    :((((
+
+    <b>P.S. Could finish this job tomorrow if it is possible...</b>
+</pre>
+
+<div id="app" class="loading"></div>
+
+<script type="text/javascript" src="media/jquery.min.js"></script>
+<script type="text/javascript" src="media/app.js?_=<?php echo $this->scriptsCacheCounter ?>"></script>
+<script type="text/javascript">new classPickerApp('app', <?php echo json_encode($this->config) ?>);</script>
+</body>
+</html>
